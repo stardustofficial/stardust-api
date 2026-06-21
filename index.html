@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Stardust Developer API Hub</title>
+    <title>Stardust Developer API Engine</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
         ::-webkit-scrollbar { width: 6px; }
@@ -15,7 +15,10 @@
     <header class="border-b border-purple-950 bg-[#111322] px-6 py-4 flex justify-between items-center shadow-lg">
         <div class="flex items-center space-x-3">
             <div class="h-8 w-8 bg-gradient-to-tr from-purple-600 to-indigo-600 rounded-lg flex items-center justify-center font-bold text-white shadow-md shadow-purple-500/20">S</div>
-            <h1 class="text-xl font-bold tracking-wide bg-gradient-to-r from-white via-purple-200 to-gray-400 bg-clip-text text-transparent">Stardust <span class="text-purple-400 text-sm font-medium">API Engine</span></h1>
+            <div>
+                <h1 class="text-xl font-bold tracking-wide bg-gradient-to-r from-white via-purple-200 to-gray-400 bg-clip-text text-transparent">Stardust</h1>
+                <p class="text-[10px] text-purple-400 font-medium tracking-widest uppercase">Developer Ecosystem</p>
+            </div>
         </div>
         <div class="text-xs bg-purple-950/40 text-purple-400 border border-purple-800/40 px-3 py-1 rounded-full font-mono">v1.1.0 (Advanced)</div>
     </header>
@@ -102,6 +105,10 @@
         </section>
     </main>
 
+    <footer class="border-t border-purple-950 bg-[#0F1122] text-center py-3 text-xs text-gray-500 font-mono tracking-wide">
+        &copy; 2026 Stardust Inc. | Crafted with 🌌 by <span class="text-purple-400 font-medium">Zishan</span>
+    </footer>
+
     <script>
         const mockDatabase = {
             users: [
@@ -119,7 +126,6 @@
             document.getElementById('generator-panel').classList.add('hidden');
             document.getElementById('viewer-panel').classList.remove('hidden');
             
-            // Set UI active modes
             document.getElementById('btn-generator').className = "w-full text-left px-3 py-3 rounded-lg bg-gradient-to-r from-purple-900/20 to-indigo-900/20 text-purple-400 border border-purple-950/40 font-medium text-sm transition flex items-center space-x-2";
             
             document.getElementById('json-code-block').textContent = JSON.stringify(mockDatabase[key], null, 4);
@@ -139,7 +145,6 @@
             document.getElementById('viewer-panel').classList.add('hidden');
             document.getElementById('generator-panel').classList.remove('hidden');
             
-            // Update active state tabs
             document.getElementById('btn-users').className = "w-full text-left px-3 py-2.5 rounded-lg hover:bg-purple-950/30 text-gray-400 font-mono text-sm transition flex justify-between items-center group";
             document.getElementById('btn-products').className = "w-full text-left px-3 py-2.5 rounded-lg hover:bg-purple-950/30 text-gray-400 font-mono text-sm transition flex justify-between items-center group";
             document.getElementById('btn-generator').className = "w-full text-left px-3 py-3 rounded-lg bg-gradient-to-r from-purple-600 to-indigo-600 text-white font-medium text-sm transition flex items-center space-x-2 shadow-md shadow-purple-500/20";
@@ -181,4 +186,4 @@
         window.onload = () => loadMockData('users');
     </script>
 </body>
-                        </html>
+    </html>
